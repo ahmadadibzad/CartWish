@@ -1,6 +1,8 @@
 import './App.css'
 import HomePage from './components/Home/HomePage'
 import Navbar from './components/Navbar/Navbar'
+import ProductsPage from './components/Products/ProductsPage'
+import SingleProductPage from './components/SingleProduct/SingleProductPage'
 
 const App = () => {
   return (
@@ -8,6 +10,8 @@ const App = () => {
       <Navbar />
       <main>
         <HomePage />
+        <ProductsPage />
+        <SingleProductPage />
       </main>
     </div>
   )
