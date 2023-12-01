@@ -26,6 +26,7 @@ const SingleProductPage = () => {
                 <div className="single_product_thumbnails">
                     {
                         product.images.map((image, index) => <img
+                            key={index}
                             src={image}
                             alt={product.title}
                             className={selectedImage === index ? 'selected_image' : ''}
@@ -42,7 +43,11 @@ const SingleProductPage = () => {
                 <p className="single_product_description">{product.description}</p>
                 <p className="single_product_price">${product.price.toFixed(2)}</p>
 
-                <QuantityInput />
+                <h2 className="quantity_title">Quantity:</h2>
+                <div className="align-center quantity_input">
+                    <QuantityInput />
+                </div>
+                <button className="search-button add_cart">Add to Cart</button>
             </div>
         </section>
     )
