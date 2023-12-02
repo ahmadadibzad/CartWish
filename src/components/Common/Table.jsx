@@ -4,7 +4,7 @@ const Table = ({ headings, children }) => {
     return (
         <table className="common_table">
             <thead>
-                {headings.map((item, index) => <th key={index}>{item}</th>)}
+                <tr>{headings.map((item, index) => <th key={index}>{item}</th>)}</tr>
             </thead>
             {children}
         </table>
