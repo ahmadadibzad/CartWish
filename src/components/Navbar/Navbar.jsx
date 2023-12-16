@@ -6,6 +6,7 @@ import idButton from '../../assets/id-button.png';
 import memo from '../../assets/memo.png';
 import order from '../../assets/package.png';
 import lock from '../../assets/locked.png';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -25,10 +26,10 @@ const Navbar = () => {
                 <LinkWithIcon title="SignUp" link="/signup" emoji={memo} />
                 <LinkWithIcon title="My Orders" link="/myorders" emoji={order} />
                 <LinkWithIcon title="Logout" link="/logout" emoji={lock} />
-                <a href='/cart' className='align-center'>
+                <NavLink to='/cart' className='align-center'>
                     Cart
                     <p className='cart-counts align-center'>0</p>
-                </a>
+                </NavLink>
             </div>
         </nav>
     )
